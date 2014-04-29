@@ -1,4 +1,5 @@
 class FamiliesController < ApplicationController
+include ActionView::Helpers::NumberHelper
 before_action :set_family, only: [:show, :edit, :update, :destroy]
 
 	def create
@@ -36,6 +37,8 @@ before_action :set_family, only: [:show, :edit, :update, :destroy]
 	end
 
 	def show
+		# reformating the phone so it has dashes when displayed for editing (personal taste)
+	    @family.phone = number_to_phone(@family.phone)
 	end
 
   	private
