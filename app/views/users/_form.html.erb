@@ -1,0 +1,16 @@
+<%= simple_form_for(@user, html: { class: 'form-horizontal' }) do |f| %>
+   
+   <h3><%= controller.action_name.capitalize %> User</h3>
+    
+    <%= f.input :username %>
+    <%= f.input :password_digest %>
+    <%= f.input :instructor_id, collection: Instructor.active.alphabetical, prompt: "Select Instructor..."  %>
+    <%= f.input :role, collection: [['Administrator', :admin],['Instructor', :instructor]], prompt: "Select Role" %>
+    <%= f.input :active %>
+
+    <div class="form-actions">
+      <%= f.submit nil, class: 'button radius' %>
+      <%= link_to 'Back to list of users', users_path, :class => 'button secondary radius' %>
+    </div>
+
+<% end %>
