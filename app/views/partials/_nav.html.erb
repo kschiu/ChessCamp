@@ -34,7 +34,32 @@
               <li><%= link_to "Add an Instructor", new_instructor_path %></li>
             </ul>
           </li>
+
+          <li class="has-dropdown">
+            <%= link_to "Families", families_path %>
+            <ul class="dropdown">
+              <li><%= link_to "List Families", families_path %></li>
+              <li><%= link_to "Add a Family", new_family_path %></li>
+            </ul>
+          </li>
+
+          <li class="has-dropdown">
+            <%= link_to "Students", students_path %>
+            <ul class="dropdown">
+              <li><%= link_to "List Students", students_path %></li>
+              <li><%= link_to "Add a Student", new_student_path %></li>
+            </ul>
+          </li>
+
         </ul>
+        <ul class = "right">
+          <li>
+          <% if logged_in? %>
+            <%= link_to 'Logout', logout_path %>
+          <% else %>
+            <%= link_to 'Login', login_path %>
+          <% end %>
+        </li>
       </section>
     </nav>
   </div>
