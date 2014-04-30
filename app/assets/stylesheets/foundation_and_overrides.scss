@@ -1202,4 +1202,69 @@ $topbar-dropdown-link-bg: #2B3A42;
 // $include-table-visibility-classes: true;
 // $include-legacy-visibility-classes: true;
 
+
+img.left {
+  float: left;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  border: 0px;
+}
+
+img.right {
+  float: right;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+a img {
+  /*float: left;*/
+  padding-right: 0px;
+  padding-bottom: 0px;
+  border: 0px;
+  text-decoration: none;
+}
+
+#footer {
+  margin:0;
+  padding:10px 15px 5px 15px;
+  text-align:center;
+  font-size: 80%;
+}
+
+#copy {
+  margin: 7px auto;
+  color:black;
+  text-align:center;
+  font-size:70%;
+}
+
+#copy a {
+  text-decoration: none;
+}
+
+#copy a:hover {
+  text-decoration: underline;
+}
+
+.supertiny{
+  font-size:5px;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  text-decoration:none;
+}
+
+.table {
+  border-collapse:collapse;
+}
+
+#past {
+  background-color: #FAF2F0;
+  border-color: #F7EAE6;
+
+}
+
+select.date { width: 95px; }
+#camp_time_slot, #camp_max_students, #camp_cost, #camp_curriculum_id { width: 290px; }
+#instructor_bio { height: 7rem; }
+#curriculum_description { height: 7rem; }
+
 @import 'foundation';
