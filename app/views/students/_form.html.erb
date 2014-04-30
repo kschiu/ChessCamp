@@ -4,9 +4,9 @@
     
     <%= f.input :first_name %>
     <%= f.input :last_name %>
-    <%= f.input :family_id, collection: Family.active.alphabetical, prompt: "Select family..." %>
+    <%= f.input :family_id, collection: Family.active.alphabetical, prompt: "Select Family..."  %>
     <%= f.input :date_of_birth, as: :date, order: [:month, :day, :year], include_blank: true, start_year: Date.today.year - 21, end_year: Date.today.year %>
-    <%= f.input :rating, as: :integer %>
+    <%= f.input :rating%>
 
     <%= f.input :active %>
 
