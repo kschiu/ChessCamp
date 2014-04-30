@@ -5,7 +5,7 @@ before_action :set_family, only: [:show, :edit, :update, :destroy]
 	def create
 		@family = Family.new(family_params)
 		if @family.save
-			redirect_to @family, notice: "#{@family.parent_first_name} was added to the system."
+			redirect_to @family, notice: "#{@family.family_name} family was added to the system."
 		else
 			render action: 'new'
 		end
@@ -17,7 +17,7 @@ before_action :set_family, only: [:show, :edit, :update, :destroy]
 
 	def update
 		if @family.update(family_params)
-			redirect_to @family, notice: "#{@family.parent_first_name} was revised in the system."
+			redirect_to @family, notice: "#{@family.family_name} family was revised in the system."
 		else
 			render action: 'edit'
 		end
@@ -39,6 +39,7 @@ before_action :set_family, only: [:show, :edit, :update, :destroy]
 	def show
 		# reformating the phone so it has dashes when displayed for editing (personal taste)
 	    @family.phone = number_to_phone(@family.phone)
+	    @students = @family.students.alphabetical.to_a
 	end
 
   	private
@@ -47,7 +48,7 @@ before_action :set_family, only: [:show, :edit, :update, :destroy]
     end
 
     def family_params
-    	params.require(:instructor).permit(:family_name, :parent_first_name, :email, :phone, :active)
+    	params.require(:family).permit(:family_name, :parent_first_name, :email, :phone, :active)
     end
 
 end
