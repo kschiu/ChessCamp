@@ -1,3 +1,7 @@
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+
 //
 // FOUNDATION SETTINGS
 //
@@ -37,7 +41,7 @@
 
 // We use these to control various global styles
 // $body-bg: #fff;
-// $body-font-color: #222;
+$body-font-color: #2B3A42;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -51,12 +55,12 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-$success-color: #B5EBC9;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+$primary-color: #3F5765;
+$secondary-color: #BDD4DE;
+$alert-color: #E74C3C;
+$success-color: #3F5765;
+$warning-color: #E74C3C;
+$info-color: #BDD4DE;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
@@ -114,7 +118,7 @@ $success-color: #B5EBC9;
 
 // We use these to control header font styles
 // $header-font-family: $body-font-family;
-// $header-font-weight: 300;
+// $header-font-weight: normal;
 // $header-font-style: normal;
 // $header-font-color: #222;
 // $header-line-height: 1.4;
@@ -240,7 +244,7 @@ $success-color: #B5EBC9;
 // We use these to control text style.
 // $alert-font-weight: normal;
 // $alert-font-size: rem-calc(13);
-$alert-font-color: #43AC6A;
+// $alert-font-color: #fff;
 // $alert-font-color-alt: scale-color($secondary-color, $lightness: -66%);
 
 // We use this for close hover effect.
@@ -319,7 +323,7 @@ $alert-font-color: #43AC6A;
 
 // We use this to control the display property.
 // $button-display: inline-block;
-$button-margin-bottom: rem-calc(0);
+// $button-margin-bottom: rem-calc(20);
 
 // We use these to control button text styles.
 // $button-font-family: $body-font-family;
@@ -697,7 +701,7 @@ $button-margin-bottom: rem-calc(0);
 // $orbit-caption-bg: rgba(51,51,51, 0.8);
 // $orbit-caption-font-color: #fff;
 // $orbit-caption-font-size: rem-calc(14);
-// $orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
+$orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
 // $orbit-caption-padding: rem-calc(10 14);
 // $orbit-caption-height: auto;
 
@@ -762,7 +766,7 @@ $button-margin-bottom: rem-calc(0);
 // $include-html-panel-classes: $include-html-classes;
 
 // We use these to control the background and border styles
-$panel-bg: scale-color(#B5E7F5, $lightness: 50%);
+// $panel-bg: scale-color(#fff, $lightness: -5%);
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
 
@@ -1028,8 +1032,8 @@ $panel-bg: scale-color(#B5E7F5, $lightness: 50%);
 // $include-html-table-classes: $include-html-classes;
 
 // These control the background color for the table and even rows
-// $table-bg: #fff;
-$table-even-row-bg: #FAF2F0;
+$table-bg: #EFEFEF;
+$table-even-row-bg: #BDD4DE;
 
 // These control the table cell border style
 $table-border-style: none;
@@ -1044,14 +1048,14 @@ $table-border-style: none;
 // $table-head-padding: rem-calc(8 10 10);
 
 // These control the row padding and font styles
-// $table-row-padding: rem-calc(9 10);
+$table-row-padding: rem-calc(5 6);
 // $table-row-font-size: rem-calc(14);
 // $table-row-font-color: #222;
 // $table-line-height: rem-calc(18);
 
 // These are for controlling the display and margin of tables
 // $table-display: table-cell;
-$table-margin-bottom: rem-calc(25);
+// $table-margin-bottom: rem-calc(20);
 
 //
 // TABS
@@ -1059,12 +1063,12 @@ $table-margin-bottom: rem-calc(25);
 
 // $include-html-tabs-classes: $include-html-classes;
 
-// $tabs-navigation-padding: rem-calc(16);
+$tabs-navigation-padding: rem-calc(12);
 // $tabs-navigation-bg-color: #efefef  ;
 // $tabs-navigation-active-bg-color: #fff;
 // $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
 // $tabs-navigation-font-color: #222;
-// $tabs-navigation-font-size: rem-calc(16);
+$tabs-navigation-font-size: rem-calc(12);
 // $tabs-navigation-font-family: $body-font-family;
 
 // $tabs-content-margin-bottom: rem-calc(24);
@@ -1123,40 +1127,43 @@ $table-margin-bottom: rem-calc(25);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: #F7EAE6;
+$topbar-bg-color: #2B3A42;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-$topbar-height: 50px;
-$topbar-margin-bottom: 20px;
+$topbar-height: 45px;
+$topbar-margin-bottom: 10px;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: normal;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-$topbar-dropdown-bg: #F7EAE6;
-$topbar-dropdown-link-color: #000;
-// $topbar-dropdown-link-bg: #F7EAE6;
+$topbar-dropdown-bg: #2B3A42;
+// $topbar-dropdown-link-color: #fff;
+$topbar-dropdown-link-bg: #2B3A42;
 // $topbar-dropdown-link-weight: normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: #000;
-$topbar-link-color-hover: #333;
+// $topbar-link-color: #fff;
+// $topbar-link-color-hover: #fff;
 // $topbar-link-color-active: #fff;
 // $topbar-link-color-active-hover: #fff;
 // $topbar-link-weight: normal;
-$topbar-link-font-size: rem-calc(18);
+// $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-$topbar-link-bg-hover: #FAF2F0;
+// $topbar-link-bg-hover: #272727;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
+// $topbar-link-text-transform: none;
+// $topbar-link-padding: $topbar-height / 3;
 
 // $topbar-button-font-size: 0.75rem;
+// $topbar-button-top: 7px;
 
 // $topbar-dropdown-label-color: #777;
 // $topbar-dropdown-label-text-transform: uppercase;
@@ -1192,69 +1199,7 @@ $topbar-link-bg-hover: #FAF2F0;
 //
 
 // $include-html-visibility-classes: $include-html-classes;
-
-img.left {
-  float: left;
-  padding-right: 15px;
-  padding-bottom: 10px;
-  border: 0px;
-}
-
-img.right {
-  float: right;
-  padding-left: 15px;
-  padding-bottom: 10px;
-}
-
-a img {
-  /*float: left;*/
-  padding-right: 0px;
-  padding-bottom: 0px;
-  border: 0px;
-  text-decoration: none;
-}
-
-#footer {
-  margin:0;
-  padding:10px 15px 5px 15px;
-  text-align:center;
-  font-size: 80%;
-}
-
-#copy {
-  margin: 7px auto;
-  color:black;
-  text-align:center;
-  font-size:70%;
-}
-
-#copy a {
-  text-decoration: none;
-}
-
-#copy a:hover {
-  text-decoration: underline;
-}
-
-.supertiny{
-  font-size:5px;
-  font-family:Verdana, Arial, Helvetica, sans-serif;
-  text-decoration:none;
-}
-
-.table {
-  border-collapse:collapse;
-}
-
-#past {
-  background-color: #FAF2F0;
-  border-color: #F7EAE6;
-
-}
-
-select.date { width: 95px; }
-#camp_time_slot, #camp_max_students, #camp_cost, #camp_curriculum_id { width: 290px; }
-#instructor_bio { height: 7rem; }
-#curriculum_description { height: 7rem; }
+// $include-table-visibility-classes: true;
+// $include-legacy-visibility-classes: true;
 
 @import 'foundation';
