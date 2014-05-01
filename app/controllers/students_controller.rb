@@ -2,8 +2,20 @@ class StudentsController < ApplicationController
 include ActionView::Helpers::NumberHelper
 before_action :set_student, only: [:show, :edit, :update, :destroy]
 
+	def family_array
+		result = []
+		Family.active.alphabetical.each do |f|
+			b = []
+			b << f.family_name
+			b << f.id
+			result << b
+		end
+		return result
+	end
+
 	def create
 		@student = Student.new(student_params)
+		@families = family_array
 		if @student.save
 			redirect_to @student, notice: "#{@student.proper_name} was added to the system."
 		else
@@ -13,9 +25,11 @@ before_action :set_student, only: [:show, :edit, :update, :destroy]
 
 	def new
 		@student = Student.new
+		@families = family_array
 	end
 
 	def update
+		@families = family_array
 		if @student.update(student_params)
 			redirect_to @student, notice: "#{@student.proper_name} was revised in the system."
 		else
