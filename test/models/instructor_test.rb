@@ -11,6 +11,8 @@ class InstructorTest < ActiveSupport::TestCase
   should validate_presence_of(:last_name)
   should validate_presence_of(:phone)
 
+  should accept_nested_attributes_for(:attractions).allow_destroy(true)
+
   should allow_value("fred@fred.com").for(:email)
   should allow_value("fred@andrew.cmu.edu").for(:email)
   should allow_value("my_fred@fred.org").for(:email)

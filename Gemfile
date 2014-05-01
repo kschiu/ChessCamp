@@ -40,7 +40,7 @@ gem 'validates_timeliness'
 
 # Use simple_form to clean up form views
 gem 'simple_form'
-
+gem 'nested_form'
 # Use foundation for base CSS
 gem 'foundation-rails'
 
