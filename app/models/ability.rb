@@ -1,6 +1,14 @@
 class Ability
   include CanCan::Ability
 
+    def getStudentIDs(instructor_id)
+        student_ids = []
+        Instructor.find(instructor_id).camps.each do |c|
+            student_ids << c.students.map {|s| s.id}
+        end
+        return student_ids.flatten
+    end
+
   def initialize(user)
     # Define abilities for the passed in user here. For example:
     #
@@ -9,11 +17,17 @@ class Ability
       if user.role? :admin
         can :manage, :all
       elsif user.role? :instructor
-        can :read, :all
+        can :read, Instructor
+        can :read, Camp
+        can :read, Curriculum
+        can :read, Location
+        can :read, Family
+        can :read, Student do |student|
+            getStudentIDs(user.instructor_id).include?(student.id)
+        end
         can :update, Instructor do |instructor|  
           instructor.id == user.instructor_id
         end
-
       else
         can :read, :all
       end
