@@ -1,6 +1,7 @@
 class FamiliesController < ApplicationController
 include ActionView::Helpers::NumberHelper
 before_action :set_family, only: [:show, :edit, :update, :destroy]
+authorize_resource
 
 	def create
 		@family = Family.new(family_params)
