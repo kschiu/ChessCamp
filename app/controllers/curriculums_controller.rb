@@ -18,7 +18,6 @@ class CurriculumsController < ApplicationController
   end
 
   def create
-    adjust_ratings
     @curriculum = Curriculum.new(curriculum_params)
     if @curriculum.save
       redirect_to @curriculum, notice: "#{@curriculum.name} was added to the system."
