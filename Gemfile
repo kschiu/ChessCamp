@@ -53,6 +53,10 @@ gem 'carrierwave'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.5'
 
+# Use CanCan to give permissions to users
+gem 'cancancan'
+
+
 # Additional gems that are very useful in Rails development
 group :development do
   gem 'quiet_assets'
