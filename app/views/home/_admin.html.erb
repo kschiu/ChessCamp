@@ -5,7 +5,14 @@
 
   <div class="small-3 columns">
     <div class = "panel radius">
+		<%= image_tag "blank_user_icon.png" %> 
+		<p> Username: <%= current_user.username %> </p>
+		<p> Role: <%= current_user.role.capitalize %> </p>
+    </div>
 
+    <div class = "panel radius">
+    	<h3 class="text-center">Quick Links: </h3>
+    	<%= link_to "Add Camp", new_camp_url %>
     </div>
   </div>
 
@@ -17,6 +24,13 @@
     <div class = "panel radius">
     	<%= render :partial => "camps", locals: { status: "Upcoming", camps: @upcoming_camps } %>
     </div>
+    <div class= "small-8 columns">
+      <div class = "panel radius">
+        <%= render :partial => "locations", locals: { status: "Active", locations: @active_locations } %>
+      </div>
+    </div>
+    </div>
+
   </div>
 
 </div>

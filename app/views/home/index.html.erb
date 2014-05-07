@@ -1,4 +1,4 @@
-<% if logged_in? %>
+<% if current_user.role == 'admin' %>
 	<%= render :partial => 'admin' %>
 <% else %>
 	<%= render :partial => 'general_home' %>
