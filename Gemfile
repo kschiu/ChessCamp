@@ -47,6 +47,11 @@ gem 'foundation-rails'
 # Use geocoder to get latitude and longitude data
 gem 'geocoder'
 
+#Use Gem for Google Maps 
+gem 'underscore-rails'
+gem 'gmaps4rails'
+
+
 # Use carrierwave to upload instructor photos
 gem 'carrierwave'
 

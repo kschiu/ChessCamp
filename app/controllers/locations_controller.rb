@@ -9,6 +9,10 @@ include ActionView::Helpers::NumberHelper
   end
 
   def show
+    @hash = Gmaps4rails.build_markers(@location) do |loc, marker|
+      marker.lat loc.latitude
+      marker.lng loc.longitude
+    end
   end
 
   def new

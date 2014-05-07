@@ -10,6 +10,8 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require underscore
+//= require gmaps/google
 //= require jquery
 //= require jquery_ujs
 //= require jquery_nested_form
@@ -18,3 +20,16 @@
 
 $(function(){ $(document).foundation(); });
 
+function displayOnMap(lat,lng){
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers([
+    {
+      "lat": lat,
+      "lng": lng,
+    }
+  ]);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+});
+};
