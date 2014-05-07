@@ -13,11 +13,3 @@
 
  *= require_tree .
  */
-
-/*To fix some issues with the Map*/
-img,
-object,
-embed {
-  max-width: none !important;
-  height: auto;
-}

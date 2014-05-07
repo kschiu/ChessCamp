@@ -38,7 +38,7 @@ class CurriculumsController < ApplicationController
 
   def destroy
     @curriculum.destroy
-    redirect_to curriculums_url, notice: "#{@curriculum.name} was removed from the system."
+    redirect_to curriculums_url, notice: "Curriculums cannot be deleted."
   end
 
   private

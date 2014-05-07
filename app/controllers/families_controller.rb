@@ -26,7 +26,7 @@ authorize_resource
 
 	def destroy
 		@family.destroy
-		redirect_to families_url, notice: "#{@family.parent_first_name} was removed from the system."
+		redirect_to families_url, notice: "Families cannot be deleted."
 	end
 
 	def index

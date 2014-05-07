@@ -40,7 +40,7 @@ authorize_resource
 
 	def destroy
 		@student.destroy
-		redirect_to students_url, notice: "#{@student.proper_name} was removed from the system."
+		redirect_to students_url, notice: "Students cannot be deleted."
 	end
 
 	def index
