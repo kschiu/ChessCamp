@@ -20,7 +20,7 @@ class RegistrationsController < ApplicationController
   def create
     @registration = Registration.new(registration_params)
     if @registration.save
-      redirect_to @registration, notice: "Registration was added to the system."
+      redirect_to camps_url, notice: "Registration was added to the system."
     else
       render action: 'new'
     end
@@ -28,7 +28,7 @@ class RegistrationsController < ApplicationController
 
   def update
     if @registration.update(registration_params)
-      redirect_to @registration, notice: "Registration was revised in the system."
+      redirect_to camps_url, notice: "Registration was revised in the system."
     else
       render action: 'edit'
     end
@@ -36,7 +36,7 @@ class RegistrationsController < ApplicationController
 
   def destroy
     @registration.destroy
-    redirect_to registrations_url, notice: "Registration was removed from the system."
+    redirect_to camps_url, notice: "Registration was removed from the system."
   end
 
   private

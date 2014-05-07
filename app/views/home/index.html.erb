@@ -1,6 +1,8 @@
 <% if !(current_user.nil?) and current_user.role == 'admin' %>
 	<%= render :partial => 'admin' %>
+<% elsif !(current_user.nil?) and current_user.role == 'instructor' %>
+	<%= render :partial => 'instructor' %>
 <% else %>
 	<%= render :partial => 'general_home' %>
 <% end %>
-
+	
