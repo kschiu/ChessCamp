@@ -2,10 +2,10 @@
 	<div class="row">
 		<div class="small-7 columns">
 			<fieldset>
-		    <legend><%= controller.action_name.capitalize %> Instructor</legend>
-					<%= render "form", :f => instructor_form %>
+				<%= render "form", :f => instructor_form %>
 		  </fieldset>
 		</div>
+
 		<div class="small-5 columns">
 			<legend>Add a user to this instructor</legend>				
 				<%= instructor_form.simple_fields_for :user do |user_form| %>
@@ -13,5 +13,11 @@
 				<% end %> 
 		</div>
 	</div>
+
+	<div class="form-actions">
+      <%= instructor_form.submit nil, class: 'button radius' %>
+      <%= link_to 'Back to list of instructors', instructors_path, :class => 'button secondary radius' %>
+    </div>
+
 
 <% end %>
