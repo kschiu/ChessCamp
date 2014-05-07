@@ -11,6 +11,7 @@ class RegistrationsController < ApplicationController
 
   def new
     @registration = Registration.new
+    @camps = camp_array
   end
 
   def edit
@@ -39,6 +40,15 @@ class RegistrationsController < ApplicationController
   end
 
   private
+
+  	def camp_array
+  		camps = []
+  		Camp.upcoming.active.alphabetical.each do |c|
+  			camps << [c.curriculum.name + " taught at " + c.location.name + " on "+ c.start_date.strftime("%b %d, %Y") , c.id]
+  		end	
+  		return camps
+  	end
+
     def set_registration
       @registration = Registration.find(params[:id])
     end
@@ -49,4 +59,3 @@ class RegistrationsController < ApplicationController
 end
 
 
-end

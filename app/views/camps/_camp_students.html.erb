@@ -1,14 +1,18 @@
-<%= "Registrations ("+@students.size.to_s+")" %>
+<div class="panel clearfix">
+	<%= "Registrations ("+@students.size.to_s+")" %>
 
-<table class="table">
-  <tr>
-    <th>Name</th>
-    <th>Rating</th>
-  </tr>
+	<table class="table">
+	  <tr>
+	    <th>Name</th>
+	    <th>Rating</th>
+	  </tr>
 
-<% @students.each do |student| %>
-  <tr>
-    <td><%= link_to student.name, student_path(student) %></td>
-    <td><%= student.rating != 0 ? student.rating.to_s : "Unrated" %></td>
-  </tr>
-<% end %>
+	<% @students.each do |student| %>
+	  <tr>
+	    <td><%= link_to student.name, student_path(student) %></td>
+	    <td><%= student.rating != 0 ? student.rating.to_s : "Unrated" %></td>
+	  </tr>
+	<% end %>
+</table>
+
+</div>
