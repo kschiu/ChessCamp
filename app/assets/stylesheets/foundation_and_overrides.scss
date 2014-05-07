@@ -47,7 +47,8 @@ $body-font-color: #2B3A42;
 // $body-font-style: normal;
 
 // We use this to control font-smoothing
-// $font-smoothing: antialiased;
+
+$font-smoothing: antialiased;
 
 // We use these to control text direction settings
 // $text-direction: ltr;
@@ -1262,9 +1263,15 @@ a img {
 
 }
 
+.center {
+	text-align:center;
+}
+
 select.date { width: 95px; }
 #camp_time_slot, #camp_max_students, #camp_cost, #camp_curriculum_id { width: 290px; }
 #instructor_bio { height: 7rem; }
 #curriculum_description { height: 7rem; }
+
+
 
 @import 'foundation';
