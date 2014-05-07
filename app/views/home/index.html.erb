@@ -1,18 +1,6 @@
-<h1 class= "center">Welcome to Chess Camp!</h1>
+<% if logged_in? %>
+	<%= render :partial => 'admin' %>
+<% else %>
+	<%= render :partial => 'general_home' %>
+<% end %>
 
-<h3>Introduction to Chess Camp</h3>
-<p> Welcome to the most intensive Chess Camp in the land of America! Here at Chess Camp, we take pride in offering high end chess training from child prodigies Alex and Mark Heimann! Their winning track record, combined with their passion to teach the game of chess makes this camp on of the most competitive in the nation. Our Chess Camp Instructors are devoted to creating winners.
-</p>
-
-<div class= "row">
-	<div class="small-4 small-centered columns">
-		<%= image_tag('Alex-Champ.jpg')%>
-	</div>
-</div>
-</br>
-
-<p> We take pride in knowing that our track record and chess knowledge will drive students to becoming a grand master!</p>
-
-</br>
-
-<p class= "center">If you have an account, please log in: </br><%= link_to "Login", login_path, class: 'button tiny radius' %></p>
