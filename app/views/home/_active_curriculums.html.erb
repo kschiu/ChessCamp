@@ -1,0 +1,20 @@
+<h3 class = "small text-center">Active Curriculums</h3>
+
+<table class="table">
+  <tr>
+    <th width="200">Name</th>
+    <th width='300'>Ratings Range</th>
+    <th></th>
+  </tr>
+
+<% @active_curriculums.each do |curriculum| %>
+  <tr>
+    <td><%= link_to curriculum.name, curriculum_path(curriculum) %></td>
+    <td align="center"><%= curriculum.min_rating.zero? ? "Unrated" : curriculum.min_rating %> - <%= curriculum.max_rating %></td>
+  </tr>
+<% end %>
+</table>
+<!-- Add the pagination using will_paginate gem -->
+<span class="paginate">
+<%= will_paginate @active_curriculums, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+</span>

@@ -2,7 +2,6 @@
 
 <div class="row">
 
-
   <div class="small-3 columns">
     <div class = "panel radius">
 		<%= image_tag "blank_user_icon.png" %> 
@@ -12,7 +11,12 @@
 
     <div class = "panel radius">
     	<h3 class="text-center">Quick Links: </h3>
-    	<%= link_to "Add Camp", new_camp_url %>
+      <ul>
+      	<li><%= link_to "Add New Camp", new_camp_url %> </li>
+        <li><%= link_to "Add New Curriculum", new_curriculum_url %></li>
+        <li><%= link_to "Add New Instructor", new_instructor_url %></li>
+        <li><%= link_to "Add New Location", new_camp_url %></li>
+      </ul>
     </div>
   </div>
 
@@ -24,13 +28,22 @@
     <div class = "panel radius">
     	<%= render :partial => "camps", locals: { status: "Upcoming", camps: @upcoming_camps } %>
     </div>
-    <div class= "small-8 columns">
+
+    <div class= "small-7 columns">
       <div class = "panel radius">
         <%= render :partial => "locations", locals: { status: "Active", locations: @active_locations } %>
       </div>
     </div>
+
+    <div class = "small-5 columns">
+      <div class = "panel radius">
+      <%= render :partial => "active_curriculums" %>
+      </div>
     </div>
 
-  </div>
+  <!-- Ends large 8 column wrapper -->
+  </div> 
 
 </div>
+
+
