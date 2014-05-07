@@ -7,7 +7,9 @@
 
 <strong>Address:&nbsp;&nbsp;</strong><br /> 
   <%= @location.street_1 %><br />
-  <%= @location.street_2 %><br />
+  <% if !(@location.street_2.nil?) %>
+    <%= @location.street_2 %><br />
+  <% end %>
   <%= @location.city + ", " + @location.state + " "+ @location.zip %>
   <br /><br />
 

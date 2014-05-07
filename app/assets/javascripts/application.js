@@ -31,5 +31,6 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   ]);
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
+  handler.getMap().setZoom(17);
 });
 };
