@@ -4,7 +4,7 @@
     
     <%= f.input :camp_id, collection: @camps, prompt: "Select Camp..." %>
     <%= f.input :student_id, collection: Student.active.alphabetical, prompt: "Select Student..." %>
-    <%= f.input :payment_status %>
+    <%= f.input :payment_status, collection: [['Deposit', 'deposit'], ['Full', 'full']], prompt: "Select payment status" %>
     <%= f.input :points_earned %>
 
 
