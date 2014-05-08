@@ -1,18 +1,27 @@
 <h3>Instructor Details</h3><br />
-<strong>Name:&nbsp;&nbsp;</strong> 
-  <%= @instructor.proper_name %><br /><br />
 
-<strong>Phone:&nbsp;&nbsp;</strong> 
-  <%= number_to_phone(@instructor.phone) %><br /><br />
 
-<strong>Email:&nbsp;&nbsp;</strong> 
-  <%= mail_to @instructor.email, @instructor.email, encode: "javascript" %><br /><br />
+	<div class = "row">
+		<div class = "small-4 columns">
+			<%= image_tag "blank_user_icon.png" %> 
+		</div>
+	</div>
+	<strong>Name:&nbsp;&nbsp;</strong> 
+	  <%= @instructor.proper_name %><br /><br />
 
-<strong>Active?&nbsp;&nbsp;</strong>
-  <%= @instructor.active ? "Yes" : "No" %><br /><br />
+	<strong>Phone:&nbsp;&nbsp;</strong> 
+	  <%= number_to_phone(@instructor.phone) %><br /><br />
 
-<strong>Biography</strong><br />
-  <%= @instructor.bio.nil? ? "N/A" : @instructor.bio %><br /><br />
+	<strong>Email:&nbsp;&nbsp;</strong> 
+	  <%= mail_to @instructor.email, @instructor.email, encode: "javascript" %><br /><br />
+
+	<strong>Active?&nbsp;&nbsp;</strong>
+	  <%= @instructor.active ? "Yes" : "No" %><br /><br />
+
+	<strong>Biography</strong><br />
+	  <%= @instructor.bio.nil? ? "N/A" : @instructor.bio %><br /><br />
+
+
 
 <% if !(@instructor.user.nil?) %>
 <h3>Instructor's user Details</h3><br />
@@ -24,7 +33,6 @@
   <%= @instructor.user.role %><br /><br />
 
 <% end %>
-
 
 
 
