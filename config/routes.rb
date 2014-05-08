@@ -6,10 +6,17 @@ ChessCamp::Application.routes.draw do
   resources :families
   resources :locations
   resources :registrations
-  resources :students
+  resources :students do
+    get :autocomplete_first_name, :on => :collection
+  end
+
   resources :users
   resources :sessions
 
+
+resources :products do
+  get :autocomplete_brand_name, :on => :collection
+end
   # semi-static routes
   get 'home', to: 'home#index', as: :home
   get 'home/about', to: 'home#about', as: :about

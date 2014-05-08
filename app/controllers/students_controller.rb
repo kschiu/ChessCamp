@@ -1,6 +1,7 @@
 class StudentsController < ApplicationController
 include ActionView::Helpers::NumberHelper
 before_action :set_student, only: [:show, :edit, :update, :destroy]
+autocomplete :first_name, :full => true
 authorize_resource
 
 	def family_array

@@ -20,6 +20,7 @@ gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # Turbolinks isn't playing nicely with foundation so for now remove it from standard rails
 # gem 'turbolinks'
@@ -51,6 +52,8 @@ gem 'geocoder'
 gem 'underscore-rails'
 gem 'gmaps4rails'
 
+#Gem for autocomplete
+gem 'rails3-jquery-autocomplete'
 
 # Use carrierwave to upload instructor photos
 gem 'carrierwave'

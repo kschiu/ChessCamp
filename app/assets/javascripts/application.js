@@ -14,9 +14,11 @@
 //= require gmaps/google
 //= require jquery
 //= require jquery_ujs
-//= require jquery_nested_form
+//= require jquery.ui.all
+//= require autocomplete-rails
 //= require foundation
 //= require_tree .
+
 
 $(function(){ $(document).foundation(); });
 
@@ -34,3 +36,18 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   handler.getMap().setZoom(17);
 });
 };
+
+// Flash fade
+$(function() {
+   $('.alert-box').fadeIn('normal', function() {
+      $(this).delay(3700).fadeOut();
+   });
+});
+
+
+// Datepicker code
+$(function() {
+  $(".datepicker").datepicker({
+    format: 'mm/dd/YYYY'
+  });
+});
